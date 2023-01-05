@@ -13,7 +13,7 @@ const Signup = () => {
     let email = e.target.email.value;
     let password = e.target.password.value;
     if (fullname && email && password !== "") {
-      const submit_data = await fetch("http://127.0.0.1:5000/user/register", {
+      const submit_data = await fetch("https://cautious-tiara-tuna.cyclic.app/user/register", {
         method: "POST",
         body: JSON.stringify(
           {

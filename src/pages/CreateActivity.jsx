@@ -21,7 +21,7 @@ const CreateActivity = () => {
       return false;
     }
     const userId =  JSON.parse(auth)
-    const submit_data = await fetch("http://127.0.0.1:5000/user/new-activity", {
+    const submit_data = await fetch("https://cautious-tiara-tuna.cyclic.app/user/new-activity", {
       method: "POST",
       body: JSON.stringify({
         "name": name,

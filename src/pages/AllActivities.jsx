@@ -9,7 +9,7 @@ const AllActivities = () => {
     const [data, setData] = useState();
     const [record, setRecord] = useState();
     const fetchData =()=>{
-        const submit_data =  fetch("http://127.0.0.1:5000/user/user-activities", {
+        const submit_data =  fetch("https://cautious-tiara-tuna.cyclic.app/user/user-activities", {
             method: "POST",
             body: JSON.stringify({
                   "user": user
@@ -29,7 +29,7 @@ const AllActivities = () => {
 
     const editHandler = (id) => {
         if(id){
-          const submitDetail = fetch('http://127.0.0.1:5000/user/fetch-activity',{
+          const submitDetail = fetch('https://cautious-tiara-tuna.cyclic.app/user/fetch-activity',{
             method: "POST",
             body: JSON.stringify({
             "id": id
@@ -51,7 +51,7 @@ const AllActivities = () => {
     const deleteHandler = async(id) =>{
         // console.log(id);
         if(id){
-          const submitDetail = await fetch(`http://127.0.0.1:5000/user/activity-delete`, {
+          const submitDetail = await fetch(`https://cautious-tiara-tuna.cyclic.app/user/activity-delete`, {
           method: "POST",
           body: JSON.stringify({
             "id": id

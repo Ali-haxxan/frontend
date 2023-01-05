@@ -11,7 +11,7 @@ const DashBoard = (props) => {
     const [swim,setSwim] = useState("0")
    
     useEffect(() =>{
-        const submit_data =  fetch("http://127.0.0.1:5000/user/activities-count", {
+        const submit_data =  fetch("https://cautious-tiara-tuna.cyclic.app/user/activities-count", {
               method: "POST",
               body: JSON.stringify({user}),
               headers: { "Content-Type": "application/json" },
